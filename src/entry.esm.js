@@ -1,6 +1,6 @@
 
 // Import vue component
-import component from '@/vuetify-query-builder.vue';
+import component from '@/VuetifyQueryBuilder.vue';
 
 // Default export is installable instance of component.
 // IIFE injects install function into component, allowing component

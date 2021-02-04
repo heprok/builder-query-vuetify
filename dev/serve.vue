@@ -10,7 +10,7 @@
 
 <script>
 import Vue from "vue";
-import VuetifyQueryBuilder from "@/vuetify-query-builder.vue";
+import VuetifyQueryBuilder from "@/VuetifyQueryBuilder.vue";
 import { RuleTypes } from "@/utilities.js";
 
 export default Vue.extend({

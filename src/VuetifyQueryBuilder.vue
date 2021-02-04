@@ -10,6 +10,7 @@
             :labels="mergedLabels"
             type="query-builder-group"
         />
+        {{$vuetify.lang.t('addRule')}}
     </div>
 </template>
 
@@ -29,7 +30,7 @@
   };
 
   export default {
-    name: 'vuetify-query-builder',
+    name: 'VuetifyQueryBuilder',
     components: {
       QueryBuilderGroup
     },
@@ -122,6 +123,7 @@
       }
     },
     mounted() {
+      console.log(this.$vuetify.lang.t('addRule'))
       this.$watch(
           'query',
           newQuery => {
