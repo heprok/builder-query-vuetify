@@ -1,9 +1,0 @@
-{
-  "addGroup": "Add group",
-  "notFoundRuleMessage": "No rules here! Add some <b>rules</b> or <b>group of rules</b> using button above.",
-  "addRule": "Add rule",
-  "addNewRule": "Add new rule",
-  "selectElementOnRule" :"Select an element to describe the rules",
-  "cancel" : "Cancel",
-  "ok" : "OK"
-}
