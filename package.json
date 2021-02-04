@@ -7,7 +7,7 @@
     "build": "cross-env NODE_ENV=production rollup --config build/rollup.config.js",
     "build:es": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format es",
     "build:ssr": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format cjs",
-    "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife",
+    "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife"
   },
   "license": "MIT",
   "main": "dist/vuetify-query-builder.ssr.js",
@@ -16,7 +16,8 @@
   "unpkg": "dist/vuetify-query-builder.min.js",
   "files": [
     "dist/*",
-    "src/**/*.vue"
+    "src/**/*.vue",
+    "src/utilities.js"
   ],
   "dependencies": {
     "vuetify": "^2.4.3"
