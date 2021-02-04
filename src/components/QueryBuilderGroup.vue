@@ -25,21 +25,21 @@
           <v-divider />
         </v-col>
         <v-col cols="12" class="speed-dial-container">
-          <v-btn color="primary" small @click="tryAddRule"> Add Rule </v-btn>
+          <v-btn color="primary" small @click="tryAddRule"> Добавить правило </v-btn>
           <v-btn
             color="primary"
             small
             v-if="this.depth < this.maxDepth"
             @click="addGroup"
           >
-            Add Groups
+            Добавить группу
           </v-btn>
         </v-col>
         <v-col cols="12">
           <div class="group-child px-5 py-2">
             <v-alert v-if="query.children.length === 0" dense text type="info">
-              No rules here! Add some <b>rules</b> or
-              <b>group of rules</b> using button above.
+              Здесь нет правил! Добавьте несколько <b> правил </b> или
+              <b> групп правил </b> с помощью кнопки выше.
             </v-alert>
             <component
               v-for="(child, index) in query.children"
@@ -68,22 +68,22 @@
 
     <v-dialog v-model="showRuleDialog" persistent max-width="800">
       <v-card>
-        <v-card-title class="headline">Add new rule</v-card-title>
+        <v-card-title class="headline">Добавить новое правило</v-card-title>
         <v-card-text>
-          <p>Select an element to describe the rules</p>
+          <p>Выберите элемент для описания правил</p>
           <v-autocomplete
             v-model="selectedRule"
             :items="rulesList"
-            label="Select rule"
+            label="Выберите правило"
             outlined
           />
         </v-card-text>
         <v-card-actions>
           <v-spacer />
           <v-btn color="primary" text @click="showRuleDialog = false"
-            >Cancel</v-btn
+            >Отмена</v-btn
           >
-          <v-btn color="primary" @click="addRule">Add new rule</v-btn>
+          <v-btn color="primary" @click="addRule">Добавить новое правило</v-btn>
         </v-card-actions>
       </v-card>
     </v-dialog>
@@ -215,7 +215,7 @@ export default {
 }
 
 .speed-dial-container {
-  margin-top: -39px;
+  margin-top: -20px;
 
   button {
     margin-right: 5px;

@@ -16,30 +16,31 @@ export const deepClone = (obj) => {
 
 const operatorToText = (operator) => {
 	switch (operator) {
+
 		case OperatorType.EQUAL:
-			return "is equal"
+			return "равно"
 		case OperatorType.N_EQUAL:
-			return "is not equal"
+			return "не равно"
 		case OperatorType.CONTAINS:
-			return "contains"
+			return "содержит"
 		case OperatorType.N_CONTAINS:
-			return "not contains"
+			return "не содержит"
 		case OperatorType.EMPTY:
-			return "is empty"
+			return "пусто"
 		case OperatorType.N_EMPTY:
-			return "is not empty"
+			return "не пуст"
 		case OperatorType.BEGINS_WITH:
-			return "begins with"
+			return "начинается с"
 		case OperatorType.ENDS_WITH:
-			return "ends with"
+			return "заканчивается на"
 		case OperatorType.GREATER:
-			return "is greater"
+			return "больше"
 		case OperatorType.GREATER_OR_EQUAL:
-			return "is greater or equals"
+			return "больше или равно"
 		case OperatorType.SMALLER:
-			return "is smaller"
+			return "меньше"
 		case OperatorType.SMALLER_OR_EQUAL:
-			return "is smaller or equals"
+			return "меньше или равно"
 	}
 	return "--- error, not defined ---";
 }

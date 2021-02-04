@@ -10,7 +10,6 @@
             :labels="mergedLabels"
             type="query-builder-group"
         />
-        {{$vuetify.lang.t('addRule')}}
     </div>
 </template>
 
@@ -19,14 +18,14 @@
   import {deepClone, RuleTypes, OperatorType} from './utilities.js';
 
   const defaultLabels = {
-    matchType: "Match Type",
-    matchTypeAll: "All",
-    matchTypeAny: "Any",
-    addRule: "Add Rule",
-    removeRule: "&times;",
-    addGroup: "Add Group",
-    removeGroup: "&times;",
-    textInputPlaceholder: "value",
+    matchType: "Тип соответствия",
+    matchTypeAll: "Все",
+    matchTypeAny: "Любой",
+    addRule: "Добавить правило",
+    removeRule: "×",
+    addGroup: "Добавить группу",
+    removeGroup: "×",
+    textInputPlaceholder: "значение",
   };
 
   export default {
@@ -123,7 +122,6 @@
       }
     },
     mounted() {
-      console.log(this.$vuetify.lang.t('addRule'))
       this.$watch(
           'query',
           newQuery => {

@@ -15,7 +15,7 @@
             :items="mappedOperators"
             outlined
             dense
-            label="Rule"
+            label="Правило"
           />
         </v-col>
         <v-col
@@ -34,7 +34,7 @@
             type="text"
             v-model="query.value"
             dense
-            label="Value"
+            label="Значение"
           />
           <v-text-field
             hide-details
@@ -47,7 +47,7 @@
             type="number"
             v-model="query.value"
             dense
-            label="Value"
+            label="Значение"
           />
           <v-select
             hide-details
@@ -60,7 +60,7 @@
             :items="selectOptions"
             :multiple="rule.inputType === RuleTypes.MULTI_SELECT"
             outlined
-            label="Value"
+            label="Значение"
           />
           <v-select
             hide-details
@@ -72,7 +72,7 @@
             v-model="query.value"
             :items="boolOptions"
             outlined
-            label="Value"
+            label="Значение"
           />
           <v-dialog
             v-if="rule.inputType === RuleTypes.DATE"
@@ -86,7 +86,7 @@
               <v-text-field
                 v-model="query.value"
                 outlined
-                label="Value"
+                label="Значение"
                 dense
                 prepend-icon="far fa-calendar-alt"
                 readonly
@@ -96,7 +96,7 @@
             <v-date-picker v-if="modal" v-model="query.value" full-width>
               <v-spacer></v-spacer>
               <v-btn outlined color="primary" @click="modal = false"
-                >Cancel</v-btn
+                >Отмена</v-btn
               >
               <v-btn color="primary" @click="$refs.dialog2.save(query.value)"
                 >OK</v-btn
@@ -116,7 +116,7 @@
               <v-text-field
                 v-model="query.value"
                 outlined
-                label="Value"
+                label="Значение"
                 dense
                 prepend-icon="far fa-clock"
                 readonly
@@ -126,7 +126,7 @@
             <v-time-picker v-if="modal2" v-model="query.value" full-width>
               <v-spacer></v-spacer>
               <v-btn outlined color="primary" @click="modal2 = false"
-                >Cancel</v-btn
+                >Отмена</v-btn
               >
               <v-btn color="primary" @click="$refs.dialog.save(query.value)"
                 >OK</v-btn
