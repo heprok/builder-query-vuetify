@@ -1,15 +1,15 @@
 {
-  "name": "vuetify-query-builder",
+  "name": "vuetify-query-builder-",
   "version": "1.0.0",
-  "description": "",
+  "description": "Query builder for vuetify",
   "scripts": {
     "serve": "vue-cli-service serve dev/serve.js",
     "build": "cross-env NODE_ENV=production rollup --config build/rollup.config.js",
     "build:es": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format es",
     "build:ssr": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format cjs",
     "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife",
-    "i18n:report": "vue-cli-service i18n:report --src './src/**/*.?(js|vue)' --locales './src/locales/**/*.json'"
   },
+  "license": "MIT",
   "main": "dist/vuetify-query-builder.ssr.js",
   "module": "dist/vuetify-query-builder.esm.js",
   "browser": "dist/vuetify-query-builder.esm.js",
