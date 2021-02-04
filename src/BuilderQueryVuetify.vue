@@ -29,7 +29,7 @@
   };
 
   export default {
-    name: 'VuetifyQueryBuilder',
+    name: 'BuilderQueryVuetify',
     components: {
       QueryBuilderGroup
     },

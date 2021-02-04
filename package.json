@@ -1,5 +1,5 @@
 {
-  "name": "builder-quiery-vuetify",
+  "name": "builder-query-vuetify",
   "version": "1.0.0",
   "description": "Query builder for vuetify",
   "scripts": {
@@ -10,10 +10,10 @@
     "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife"
   },
   "license": "MIT",
-  "main": "dist/vuetify-query-builder.ssr.js",
-  "module": "dist/vuetify-query-builder.esm.js",
-  "browser": "dist/vuetify-query-builder.esm.js",
-  "unpkg": "dist/vuetify-query-builder.min.js",
+  "main": "dist/builder-query-vuetify.ssr.js",
+  "module": "dist/builder-query-vuetify.esm.js",
+  "browser": "dist/builder-query-vuetify.esm.js",
+  "unpkg": "dist/builder-query-vuetify.min.js",
   "files": [
     "dist/*",
     "src/**/*.vue",

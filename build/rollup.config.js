@@ -79,7 +79,7 @@ if (!argv.format || argv.format === 'es') {
     input: 'src/entry.esm.js',
     external,
     output: {
-      file: 'dist/vuetify-query-builder.esm.js',
+      file: 'dist/builder-query-vuetify.esm.js',
       format: 'esm',
       exports: 'named',
     },
@@ -111,9 +111,9 @@ if (!argv.format || argv.format === 'cjs') {
     external,
     output: {
       compact: true,
-      file: 'dist/vuetify-query-builder.ssr.js',
+      file: 'dist/builder-query-vuetify.ssr.js',
       format: 'cjs',
-      name: 'VuetifyQueryBuilder',
+      name: 'BuilderQueryVuetify',
       exports: 'auto',
       globals,
     },
@@ -141,9 +141,9 @@ if (!argv.format || argv.format === 'iife') {
     external,
     output: {
       compact: true,
-      file: 'dist/vuetify-query-builder.min.js',
+      file: 'dist/builder-query-vuetify.min.js',
       format: 'iife',
-      name: 'VuetifyQueryBuilder',
+      name: 'BuilderQueryVuetify',
       exports: 'auto',
       globals,
     },

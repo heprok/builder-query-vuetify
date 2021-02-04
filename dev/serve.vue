@@ -2,7 +2,7 @@
   <div class="app">
     <v-main>
       <v-app>
-        <vuetify-query-builder :rules="rules" />
+        <builder-query-vuetify :rules="rules" />
       </v-app>
     </v-main>
   </div>
@@ -10,13 +10,13 @@
 
 <script>
 import Vue from "vue";
-import VuetifyQueryBuilder from "@/VuetifyQueryBuilder.vue";
+import BuilderQueryVuetify from "@/BuilderQueryVuetify.vue";
 import { RuleTypes } from "@/utilities.js";
 
 export default Vue.extend({
   name: "ServeDev",
   components: {
-    VuetifyQueryBuilder,
+    BuilderQueryVuetify,
   },
   data() {
     return {
