@@ -22,6 +22,11 @@ export default Vue.extend({
     return {
       rules: [
         {
+          type: RuleTypes.TEXT,
+          id: 1,
+          label: "First Name",
+        },
+        {
           type: RuleTypes.NUMBER,
           id: 2,
           label: "Age",
@@ -53,6 +58,31 @@ export default Vue.extend({
             { label: "indigo", value: "Indigo" },
             { label: "violet", value: "Violet" },
           ],
+        },
+        {
+          type: RuleTypes.DATE,
+          id: 5,
+          label: "Date",
+        },
+        {
+          type: RuleTypes.TIME,
+          id: 6,
+          label: "Time",
+        },
+        {
+          type: RuleTypes.BOOL,
+          id: 7,
+          label: "Bool",
+        },
+        {
+          type: RuleTypes.AGGREGATE,
+          id: 8,
+          label: "Aggregate",
+        },
+        {
+          type: RuleTypes.BOOL_INPUT,
+          id: 9,
+          label: "Bool input",
         },
       ],
     };
