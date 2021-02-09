@@ -2,7 +2,8 @@
   <div class="app">
     <v-main>
       <v-app>
-        <builder-query-vuetify :rules="rules" />
+        <builder-query-vuetify :rules="rules" v-model="query" />
+        <v-btn @click="getQuery" color="primary"> click </v-btn>
       </v-app>
     </v-main>
   </div>
@@ -18,13 +19,23 @@ export default Vue.extend({
   components: {
     BuilderQueryVuetify,
   },
+  methods: {
+    getQuery() {
+      console.log(this.query.children);
+    },
+  },
   data() {
     return {
+      query: {
+        operator: "AND",
+        children: [],
+      },
       rules: [
         {
           type: RuleTypes.TEXT,
           id: 1,
           label: "First Name",
+          nameTable: "s.",
         },
         {
           type: RuleTypes.NUMBER,

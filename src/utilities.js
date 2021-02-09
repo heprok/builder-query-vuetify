@@ -45,10 +45,41 @@ const operatorToText = (operator) => {
 	return "--- error, not defined ---";
 }
 
+export const operatorToSqlOperator = (operator) => {
+	switch (operator) {
+
+		case OperatorType.EQUAL:
+			return "="
+		case OperatorType.N_EQUAL:
+			return "<>"
+		case OperatorType.CONTAINS:
+			return "IN"
+		case OperatorType.N_CONTAINS:
+			return "NOT IN"
+		case OperatorType.EMPTY:
+			return "IS NULL"
+		case OperatorType.N_EMPTY:
+			return "IS NOT NULL"
+		case OperatorType.BEGINS_WITH:
+			return "%LIKE"
+		case OperatorType.ENDS_WITH:
+			return "LIKE%"
+		case OperatorType.GREATER:
+			return ">"
+		case OperatorType.GREATER_OR_EQUAL:
+			return ">="
+		case OperatorType.SMALLER:
+			return "<"
+		case OperatorType.SMALLER_OR_EQUAL:
+			return "<="
+	}
+	return "--- error, not defined ---";
+}
+
 export const mapOperators = (operatorsArray) => {
 	return operatorsArray.map(x => ({
 		text: operatorToText(x),
-		value: x
+		value: operatorToSqlOperator(x)
 	}))
 }
 

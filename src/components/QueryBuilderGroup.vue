@@ -127,6 +127,7 @@ export default {
           operator: this.selectedRule.operators[0],
           value: null,
           ruleType: this.selectedRule.type,
+          nameTable: this.selectedRule.nameTable,
         },
       });
 

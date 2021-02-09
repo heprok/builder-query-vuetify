@@ -19,8 +19,8 @@
 
   const defaultLabels = {
     matchType: "Тип соответствия",
-    matchTypeAll: "Все",
-    matchTypeAny: "Любой",
+    matchTypeAll: {text: "Все", value: 'AND'},
+    matchTypeAny: {text: "Любой", value: 'OR'},
     addRule: "Добавить правило",
     removeRule: "×",
     addGroup: "Добавить группу",
@@ -54,7 +54,7 @@
       return {
         depth: 1,
         query: {
-          operator: "All",
+          operator: "AND",
           children: []
         },
         ruleTypes: {
@@ -95,7 +95,7 @@
             inputType: RuleTypes.SELECT,
           },
           [RuleTypes.MULTI_SELECT]: {
-            operators: [OperatorType.EQUAL, OperatorType.N_EQUAL, OperatorType.CONTAINS, OperatorType.N_CONTAINS, OperatorType.GREATER, OperatorType.GREATER_OR_EQUAL, OperatorType.SMALLER, OperatorType.SMALLER_OR_EQUAL, OperatorType.EMPTY, OperatorType.N_EMPTY],
+            operators: [OperatorType.CONTAINS, OperatorType.N_CONTAINS],
             inputType: RuleTypes.MULTI_SELECT,
           },
         }
@@ -117,7 +117,6 @@
             mergedRules.push(rule);
           }
         });
-
         return mergedRules;
       }
     },
@@ -128,7 +127,7 @@
             this.$emit('input', deepClone(newQuery))
           },
           {deep: true}
-      );
+      );      
 
       if (typeof this.$options.propsData.value !== "undefined") {
         this.query = Object.assign(this.query, this.$options.propsData.value)
