@@ -1,6 +1,6 @@
 {
   "name": "builder-query-vuetify",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Query builder for vuetify",
   "scripts": {
     "dev": "vue-cli-service serve dev/serve.js",

@@ -12,11 +12,12 @@
       <v-btn
         class="remove-button"
         color="error"
+        icon
         x-small
         v-if="this.depth > 1"
         @click="remove"
       >
-        <v-icon x-small>fa-times</v-icon>
+        <v-icon >mdi-close-circle</v-icon>
       </v-btn>
     </v-card-title>
     <v-card-text>

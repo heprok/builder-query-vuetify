@@ -2,18 +2,19 @@
   <v-card class="vqb-rule">
     <v-card-text>
       <v-btn class="remove-button" color="error" x-small @click="remove">
-        <v-icon x-small>fa-times</v-icon>
+        <v-icon>mdi-close-circle</v-icon>
       </v-btn>
       <v-row>
         <v-col cols="12" sm="6" md="2" class="d-flex align-center text-break">
           <b>{{ rule.label }}</b>
         </v-col>
         <v-col cols="12" sm="6" md="4">
-          <v-select
+          <v-autocomplete
             hide-details
             v-model="query.operator"
             :items="mappedOperators"
-            outlined
+            outlined  
+            auto-select-first
             dense
             label="Правило"
           />
@@ -49,9 +50,14 @@
             dense
             label="Значение"
           />
-          <v-select
+          <v-autocomplete
             hide-details
             dense
+            auto-select-first
+            chips
+            clearable 
+            small-chips
+            deletable-chips
             v-if="
               rule.inputType === RuleTypes.SELECT ||
               rule.inputType === RuleTypes.MULTI_SELECT
